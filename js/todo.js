@@ -23,7 +23,7 @@ function paintToDo(newTodoObj) {
     const span = document.createElement("span");
     span.innerText = newTodoObj.text;
     const button = document.createElement("button");
-    button.innerText = "❌";
+    button.innerText = "🗙";
     button.addEventListener("click", deleteToDo);
  
     li.appendChild(span);
@@ -54,3 +54,16 @@ if (savedToDos) {
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
 }
+
+// if (savedToDos) {
+//     const parsedToDos = JSON.parse(savedToDos);
+//     toDos = parsedToDos;
+//     if (parsedToDos.length > 0) {
+//         toDoList.classList.remove("hidden");
+//         parsedToDos.forEach(paintToDo);
+//     } else {
+//         toDoList.classList.add("hidden");
+//     }
+// } else {
+//     toDoList.classList.add("hidden");
+// }

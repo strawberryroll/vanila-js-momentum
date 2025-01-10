@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Momentum</title>
 </head>
+
 <body>
+
+    <div id="icon-wrapper">
+        <button id="info-icon" class="icon-btn">
+            <span class="material-icons">info</span>
+        </button>
+        <button id="todo-icon" class="icon-btn">
+            <span class="material-icons">task</span>
+        </button>
+    </div>
+
+    <h2 id="clock">00:00:00</h2>
+
     <form id="login-form" class="hidden">
         <input
             required
@@ -16,25 +31,49 @@
         />
         <button>Log In</button>
     </form>
-    <h2 id="clock">00:00:00</h2>
+
     <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required/>
-    </form>
-    <ul id="todo-list"></ul>
+
+    <div id="todo-wrapper" class="hidden">
+        <form id="todo-form">
+            <input type="text" placeholder="Write a To Do and Press Enter" required/>
+        </form>
+        <ul id="todo-list"></ul>
+    </div>
+
+    <div id="info-modal" class="hidden">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">×</button>
+            <h2>About This App</h2>
+            <p>이 앱은 동기부여와 생산성 향상을 돕기 위해 제작된 서비스입니다.</p>
+            <ul>
+                <li>Key Features</li>
+                <li>현재 시간 확인</li>
+                <li>To-Do 리스트 관리</li>
+                <li>영감을 주는 명언 제공</li>
+                <li>실시간 날씨 및 위치 정보 표시</li>
+                <li>랜덤 감성 배경 이미지</li>
+            </ul>
+            <p>이 앱은 <a href="https://nomadcoders.co/javascript-for-beginners">Nomad Coders의 강의</a>를 기반으로 개발되었습니다.</p>
+        </div>
+    </div>
+
     <div id="quote">
         <span></span>
         <span></span>
     </div>
+
     <div id="weather">
         <span></span>
         <span></span>
     </div>
+
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/icon.js"></script>
     <script src="js/weather.js"></script>
 </body>
 </html>
